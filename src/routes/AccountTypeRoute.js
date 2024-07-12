@@ -10,7 +10,7 @@ router.get("/", accountTypeController.accountType_list);
 router.post("/create/:accountType", accountTypeController.accountType_create);
 
 // Update an account type by ID
-router.put("/update/:id", accountTypeController.accountType_update);
+router.put("/update/:idAccountType/:accountType", accountTypeController.accountType_update);
 
 // Get an account type by ID
 router.get("/:id", accountTypeController.accountType_detail);

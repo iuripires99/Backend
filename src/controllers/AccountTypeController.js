@@ -26,7 +26,7 @@ controllers.accountType_create = async (req, res) => {
 
 controllers.accountType_update = async (req, res) => {
   const idReceived = req.params.id;
-  const { accountType } = req.body;
+  const { accountType } = req.params;
   try {
     const updatedAccountType = await AccountType.update(
       { accountType },
