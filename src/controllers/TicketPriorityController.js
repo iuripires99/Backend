@@ -15,9 +15,9 @@ controllers.ticketPriority_list = async (req, res) => {
 };
 
 controllers.ticketPriority_create = async (req, res) => {
-  const { TICKETPRIORITY } = req.params;
+  const { ticketPriority } = req.params;
   try {
-    const newPriority = await TicketPriority.create({ TICKETPRIORITY });
+    const newPriority = await TicketPriority.create({ ticketPriority });
     res.json(newPriority);
   } catch (error) {
     res.status(400).json({ error: error.message });
