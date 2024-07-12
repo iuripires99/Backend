@@ -3,6 +3,7 @@ const app = express();
 const sequelize = require('./models/database');
 const associations = require('./models/associations');
 const middleware = require('./middleware');
+const insertInitialData = require('./controllers/initialData');
 
 const bodyParser = require("body-parser");
 
@@ -88,6 +89,8 @@ sequelize.authenticate()
         // Start the server on port 8080
         app.listen(app.get("port"), () => {
             console.log("Start server on port " + app.get("port"));
+
+            insertInitialData();
         });
     })
     .catch(err => {
