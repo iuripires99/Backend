@@ -3,6 +3,7 @@ const app = express();
 const sequelize = require("./models/database");
 const associations = require("./models/associations");
 const middleware = require("./middleware");
+const insertInitialData = require('./models/insertData');
 
 const bodyParser = require("body-parser");
 
