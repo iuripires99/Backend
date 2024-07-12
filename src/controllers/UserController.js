@@ -50,8 +50,6 @@ controllers.login = async (req, res) => {
       });
     }
 
-    const isMatch = await bcrypt.compare(password, user.userPassword);
-
     if (isMatch) {
       const token = jwt.sign({ userEmail: email }, config.secret, {
         expiresIn: "1h", // Expires in 1 hour
