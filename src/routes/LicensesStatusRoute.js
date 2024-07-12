@@ -6,7 +6,7 @@ const licenseStatusController = require("../controllers/LicenseStatusController"
 router.get("/", licenseStatusController.licenseStatus_list);
 
 // Create a new license status
-router.post("/create", licenseStatusController.licenseStatus_create);
+router.post("/create/:licenseStatus", licenseStatusController.licenseStatus_create);
 
 // Update a license status by id
 router.put("/update/:id", licenseStatusController.licenseStatus_update);
