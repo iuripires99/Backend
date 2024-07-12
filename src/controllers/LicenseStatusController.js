@@ -15,7 +15,7 @@ controllers.licenseStatus_list = async (req, res) => {
 };
 
 controllers.licenseStatus_create = async (req, res) => {
-  const { licenseStatus } = req.body;
+  const { licenseStatus } = req.params;
   try {
     const newLicenseStatus = await LicenseStatus.create({ licenseStatus });
     res.json(newLicenseStatus);
