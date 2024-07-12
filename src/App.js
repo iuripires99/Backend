@@ -7,17 +7,17 @@ const middleware = require('./middleware');
 const bodyParser = require("body-parser");
 
 // Import your route modules
-const AccountType = require("./routes/accountTypeRoute");
+const AccountType = require("./routes/AccountTypeRoute");
 const AdminDepartment = require("./routes/adminDepartmentRoute");
 const Billing = require("./routes/billingRoute");
 const Budget = require("./routes/budgetRoute");
-const BudgetCart = require("./routes/budgetCartRoute");
-const BudgetPackage = require("./routes/budgetPackageRoute");
+const BudgetCart = require("./routes/BudgetCartRoute");
+const BudgetPackage = require("./routes/BudgetPackageRoute");
 const BudgetProduct = require("./routes/BudgetProductRoute");
 const BudgetStatus = require("./routes/budgetStatusRoute");
 const Cart = require("./routes/cartRoute");
 const Licenses = require("./routes/LicensesRoute");
-const LicenseStatus = require("./routes/licensesStatusRoute");
+const LicenseStatus = require("./routes/LicensesStatusRoute");
 const LicenseUser = require("./routes/licenseUserRoute");
 const Package = require("./routes/packageRoute");
 const PackageCart = require("./routes/packageCartRoute");
