@@ -14,9 +14,9 @@ controllers.ticketStatus_list = async (req, res) => {
 };
 
 controllers.ticketStatus_create = async (req, res) => {
-  const { TICKETSTATUS } = req.params;
+  const { ticketStatus } = req.params;
   try {
-    const newStatus = await TicketStatus.create({ TICKETSTATUS });
+    const newStatus = await TicketStatus.create({ ticketStatus });
     res.json(newStatus);
   } catch (error) {
     res.status(400).json({ error: error.message });
