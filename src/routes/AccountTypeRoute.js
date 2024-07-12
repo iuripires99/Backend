@@ -7,7 +7,7 @@ const accountTypeController = require("../controllers/AccountTypeController");
 router.get("/", accountTypeController.accountType_list);
 
 // Create a new account type
-router.post("/create", accountTypeController.accountType_create);
+router.post("/create/:accountType", accountTypeController.accountType_create);
 
 // Update an account type by ID
 router.put("/update/:id", accountTypeController.accountType_update);

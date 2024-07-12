@@ -15,7 +15,7 @@ controllers.productCategory_list = async (req, res) => {
 };
 
 controllers.productCategory_create = async (req, res) => {
-  const { category } = req.body;
+  const { category } = req.params;
   try {
     const newCategory = await ProductCategory.create({ category });
     res.json(newCategory);

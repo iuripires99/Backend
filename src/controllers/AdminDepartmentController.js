@@ -15,7 +15,7 @@ controllers.adminDepartment_list = async (req, res) => {
 };
 
 controllers.adminDepartment_create = async (req, res) => {
-  const { department } = req.body;
+  const { department } = req.params;
   try {
     const newAdminDepartment = await AdminDepartment.create({ department });
     res.json(newAdminDepartment);

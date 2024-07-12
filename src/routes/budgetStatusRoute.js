@@ -6,7 +6,7 @@ const budgetStatusController = require("../controllers/BudgetStatusController");
 router.get("/", budgetStatusController.budgetStatus_list);
 
 // Create a new budget status
-router.post("/create", budgetStatusController.budgetStatus_create);
+router.post("/create/:budgetStatus", budgetStatusController.budgetStatus_create);
 
 // Update a budget status by ID
 router.put("/update/:id", budgetStatusController.budgetStatus_update);

@@ -7,7 +7,7 @@ const adminDepartmentController = require("../controllers/AdminDepartmentControl
 router.get("/", adminDepartmentController.adminDepartment_list);
 
 // Create a new admin department
-router.post("/create", adminDepartmentController.adminDepartment_create);
+router.post("/create/:department", adminDepartmentController.adminDepartment_create);
 
 // Update an admin department by ID
 router.put("/update/:id", adminDepartmentController.adminDepartment_update);

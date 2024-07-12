@@ -5,7 +5,7 @@ const ticketDepartmentController = require("../controllers/TicketDepartmentContr
 
 router.get("/", ticketDepartmentController.ticketDepartment_list); 
 
-router.post("/create", ticketDepartmentController.ticketDepartment_create);
+router.post("/create/:ticketDepartment", ticketDepartmentController.ticketDepartment_create);
 
 router.put("/update/:id", ticketDepartmentController.ticketDepartment_update);
 

@@ -5,7 +5,7 @@ const ticketStatusController = require("../controllers/TicketStatusController");
 
 router.get("/", ticketStatusController.ticketStatus_list); 
 
-router.post("/create", ticketStatusController.ticketStatus_create);
+router.post("/create/:ticketStatus", ticketStatusController.ticketStatus_create);
 
 router.put("/update/:id", ticketStatusController.ticketStatus_update);
 

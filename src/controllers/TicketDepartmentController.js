@@ -15,7 +15,7 @@ controllers.ticketDepartment_list = async (req, res) => {
 };
 
 controllers.ticketDepartment_create = async (req, res) => {
-  const { TICKETDEPARTMENT } = req.body;
+  const { TICKETDEPARTMENT } = req.params;
   try {
     const newDepartment = await TicketDepartment.create({ TICKETDEPARTMENT });
     res.json(newDepartment);

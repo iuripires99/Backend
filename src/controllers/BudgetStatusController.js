@@ -15,7 +15,7 @@ controllers.budgetStatus_list = async (req, res) => {
 };
 
 controllers.budgetStatus_create = async (req, res) => {
-  const { budgetStatus } = req.body;
+  const { budgetStatus } = req.params;
   try {
     const newBudgetStatus = await BudgetStatus.create({ budgetStatus });
     res.json(newBudgetStatus);

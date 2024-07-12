@@ -15,7 +15,7 @@ controllers.accountType_list = async (req, res) => {
 };
 
 controllers.accountType_create = async (req, res) => {
-  const { accountType } = req.body;
+  const { accountType } = req.params;
   try {
     const newAccountType = await AccountType.create({ accountType });
     res.json(newAccountType);

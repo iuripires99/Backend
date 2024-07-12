@@ -14,7 +14,7 @@ controllers.ticketStatus_list = async (req, res) => {
 };
 
 controllers.ticketStatus_create = async (req, res) => {
-  const { TICKETSTATUS } = req.body;
+  const { TICKETSTATUS } = req.params;
   try {
     const newStatus = await TicketStatus.create({ TICKETSTATUS });
     res.json(newStatus);
