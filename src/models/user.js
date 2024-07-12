@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize");
 const sequelize = require("./database");
-const bcrypt = require("bcrypt"); //encripta a pass a guardar na BD
 
 const User = sequelize.define(
   "user",
