@@ -8,6 +8,7 @@ const TicketPriority = require("./models/ticketPriority");
 const TicketStatus = require("./models/ticketStatus");
 const { sequelize } = require('./models/database');
 
+
 async function insertInitialData() {
     const transaction = await sequelize.transaction();
 
