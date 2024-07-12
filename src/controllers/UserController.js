@@ -76,7 +76,6 @@ controllers.login = async (req, res) => {
 };
 
 controllers.user_create = async (req, res) => {
-  console.log(req.body); // Log the request body to inspect incoming data
   const {
     idAccountType,
     idDepartment,
@@ -89,6 +88,19 @@ controllers.user_create = async (req, res) => {
   } = req.body;
 
   try {
+    // Check if email is already in use
+    const existingEmail = await User.findOne({ where: { userEmail } });
+    if (existingEmail) {
+      return res.status(400).json({ error: 'Email already in use' });
+    }
+
+    // Check if NIF is already in use
+    const existingNif = await User.findOne({ where: { userNif } });
+    if (existingNif) {
+      return res.status(400).json({ error: 'NIF already in use' });
+    }
+
+    // Create new user
     const newUser = await User.create({
       idAccountType,
       idDepartment,
@@ -102,6 +114,7 @@ controllers.user_create = async (req, res) => {
 
     res.status(201).json(newUser); // Return 201 for successful creation
   } catch (error) {
+    console.error('Error creating user:', error);
     res.status(400).json({ error: error.message });
   }
 };
