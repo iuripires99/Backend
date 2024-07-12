@@ -15,9 +15,9 @@ controllers.ticketDepartment_list = async (req, res) => {
 };
 
 controllers.ticketDepartment_create = async (req, res) => {
-  const { TICKETDEPARTMENT } = req.params;
+  const { ticketDepartment } = req.params;
   try {
-    const newDepartment = await TicketDepartment.create({ TICKETDEPARTMENT });
+    const newDepartment = await TicketDepartment.create({ ticketDepartment });
     res.json(newDepartment);
   } catch (error) {
     res.status(400).json({ error: error.message });
