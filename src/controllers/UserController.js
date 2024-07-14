@@ -111,6 +111,12 @@ controllers.user_create = async (req, res) => {
       userNif,
       idBuyer,
     });
+    
+    if (idAccountType === 2) { // Buyer
+      const newCart = await Cart.create({ idUser: newUser.idUser, cartPrice: 0 });
+      newUser.idCart = newCart.idCart;
+      await newUser.save();
+    }
 
     res.status(201).json(newUser); // Return 201 for successful creation
   } catch (error) {
