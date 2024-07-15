@@ -19,7 +19,7 @@ router.get('/inactive', licensesController.countLicensesWithStatus2);
 router.put("/update/:licenseKey", licensesController.licenses_update);
 
 // Get a license by licenseKey
-router.get("/:licenseKey", licensesController.licenses_detail);
+router.get("/:licenseKey/:idLicenseStatus", licensesController.licenses_detail);
 
 // Delete a license by licenseKey
 router.delete("/delete", licensesController.licenses_delete);
